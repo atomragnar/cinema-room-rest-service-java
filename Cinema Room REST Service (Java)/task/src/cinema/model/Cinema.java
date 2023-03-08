@@ -1,12 +1,9 @@
 package cinema.model;
 
-import org.apache.tomcat.util.bcel.Const;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 import static cinema.model.Constants.COLUMNS;
 import static cinema.model.Constants.ROWS;
@@ -16,15 +13,11 @@ public class Cinema {
 
 
     private static int[][] cinemaSeats = new int[ROWS][COLUMNS];
-   /* private static Map<String, Integer> cinemaSeats = new ConcurrentHashMap<>();*/
 
     public Cinema() {
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < COLUMNS; j++) {
                 cinemaSeats[i][j] = Constants.EMPTY_SEAT;
-                /*StringBuilder sb = new StringBuilder();
-                sb.append(i).append(j);
-                cinemaSeats.put(sb.toString(), Constants.EMPTY_SEAT);*/
             }
         }
     }
